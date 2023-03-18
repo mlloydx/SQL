@@ -1,0 +1,24 @@
+--Create a store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, brand TEXT, price INTEGER, rating INTEGER);
+
+INSERT INTO store VALUES (1, "mascara", "NYX", 10.99, 1);
+INSERT INTO store VALUES (2, "eye liner", "Maybelline", 7.99, 2);
+INSERT INTO store VALUES (3, "blush", "NYX", 5.99, 3);
+INSERT INTO store VALUES (4, "foundation", "Cover Girl", 11.99, 4);
+INSERT INTO store VALUES (5, "highlighter", "Essence", 4.99, 5);
+INSERT INTO store VALUES (6, "eye shadow", "ELF", 3.25, 6);
+INSERT INTO store VALUES (7, "face primer", "Sephora", 8.99, 7);
+INSERT INTO store VALUES (8, "lipstick", "Kylie Cosmetics", 22.99, 8);
+INSERT INTO store VALUES (9, "lip liner", "ELF", 4.99, 9);
+INSERT INTO store VALUES (10, "lip gloss", "Dior", 30.99, 10);
+
+--Display the database ordered by price
+SELECT * FROM store
+ORDER BY price desc;
+
+--Display the top 5 items by rating
+SELECT item, price, rating
+FROM store
+order by rating desc
+limit 5; 
