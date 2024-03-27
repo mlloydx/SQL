@@ -69,7 +69,7 @@ on m.MediaTypeId = t.MediaTypeId
 JOIN chinook.Genres g
 on g.GenreId = t.GenreId;
 
-#13. Provide a query that shows all the Tracks, and include the Album name, Media type, and Genre.
+#13. Show the total sales made by each sales agent.
 SELECT emp.FirstName, emp.LastName,
 ROUND(SUM(Inv.Total), 2) as 'Total Sales' 
 FROM chinook.Employees emp
